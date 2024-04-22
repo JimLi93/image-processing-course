@@ -1,0 +1,1 @@
+function output = myGHPF(D0,M,N)output = zeros(M,N,'single'); for x=1:M    for y=1:N        temp = (x-M/2)*(x-M/2)+(y-N/2)*(y-N/2);        output(x,y) = 1-exp(-temp/2/D0/D0);    endend
