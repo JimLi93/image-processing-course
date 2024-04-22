@@ -1,0 +1,1 @@
+function output = myIDFT2(input)[M,N] = size(input);output = zeros(M,N,'single'); for u=1:M    for v=1:N        sum = 0;        for x=1:M            for y=1:N                sum = sum + input(x,y) * exp(sqrt(-1)*2*pi*((u-1)*(x-1)/M+(v-1)*(y-1)/N));            end        end        output(u,v)= sum/M/N;    endend
